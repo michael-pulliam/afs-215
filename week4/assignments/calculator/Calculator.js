@@ -1,5 +1,4 @@
 
-const expect = require('chai').expect
 
 module.exports = class Calculator{
     constructor(num1 = 2, num2 = 2){
@@ -8,26 +7,29 @@ module.exports = class Calculator{
     }
 
     add(){
-        return this.num1 + this.num2
-}
+        if(!this.notNumber()){return this.num1 + this.num2}
+        return 'You must enter numbers'
+    }
+
     subtract(){
-        return this.num1 - this.num2
+        if(!this.notNumber()){return this.num1 - this.num2}
+        return 'You must enter numbers'
     }
 
     multiple(){
-        return this.num1 * this.num2
+        if(!this.notNumber()){return this.num1 * this.num2}
+        return 'You must enter numbers'
     }
 
     divide(){
-        return this.num1 / this.num2
+        if(!this.notNumber()){return this.num1 / this.num2}
+        return 'You must enter numbers'
+    }
+
+    notNumber(){
+        if(typeof this.num1 !== 'number' || typeof this.num2 !== 'number'){
+            return true
+        }
+        return false
     }
 }
-
-
-
-
-
-
-it('add two numbers', function(){
-    expect(add(num1,num2)).to.equal(4)
-})
