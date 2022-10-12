@@ -1,3 +1,4 @@
+const Conditional = require("../conditional_test/program")
 
 
 module.exports = class Calculator{
@@ -33,3 +34,5 @@ module.exports = class Calculator{
         return false
     }
 }
+
+
