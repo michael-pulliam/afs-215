@@ -8,13 +8,7 @@ afterEach(() => {
     console.log('Test Complete')
 })
 
-before(() => {
-    console.log('Starting Test')
-})
 
-after(() => {
-    console.log('All Test Are Complete')
-})
 
 it('Array is Displaying..', () => {
     expect(user.showItems()).to.deep.equal(['hello'])
